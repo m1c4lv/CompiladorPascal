@@ -1,0 +1,121 @@
+;Quadruple - [VARGLOBAL suma, 0, null]
+MOVE #0,/65535
+;Quadruple - [VARGLOBAL resultado, 0, null]
+MOVE #0,/65534
+;Quadruple - [VARGLOBAL resultadoLogico, 0, null]
+MOVE #0,/65533
+;Quadruple - [VARGLOBAL conjuncion, 0, null]
+MOVE #0,/65532
+;Quadruple - [MVA T_2, suma, null]
+MOVE#65535,/65529
+;Quadruple - [MV T_3, 30, null]
+MOVE#30,/65528
+;Quadruple - [MV T_4, 20, null]
+MOVE#20,/65527
+;Quadruple - [ADD T_5, T_3, T_4]
+ADD/65528,/65527
+MOVE.A,/65526
+;Quadruple - [STP T_2, T_5, null]
+MOVE/65529,.R1
+MOVE/65526,[.R1]
+;Quadruple - [MVA T_6, resultado, null]
+MOVE#65534,/65525
+;Quadruple - [MVP T_7, suma, null]
+MOVE/65535,/65524
+;Quadruple - [MV T_8, 10, null]
+MOVE#10,/65523
+;Quadruple - [MUL T_9, T_7, T_8]
+MUL/65524,/65523
+MOVE.A,/65522
+;Quadruple - [MV T_10, 4, null]
+MOVE#4,/65521
+;Quadruple - [ADD T_11, T_9, T_10]
+ADD/65522,/65521
+MOVE.A,/65520
+;Quadruple - [STP T_6, T_11, null]
+MOVE/65525,.R1
+MOVE/65520,[.R1]
+;Quadruple - [MVP T_12, suma, null]
+MOVE/65535,/65519
+;Quadruple - [WRITEEXP T_12, null, null]
+WRINT /65519
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MVP T_13, resultado, null]
+MOVE/65534,/65518
+;Quadruple - [WRITEEXP T_13, null, null]
+WRINT /65518
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MVA T_14, conjuncion, null]
+MOVE#65532,/65517
+;Quadruple - [MV T_15, 1, null]
+MOVE#1,/65516
+;Quadruple - [MV T_16, 0, null]
+MOVE#0,/65515
+;Quadruple - [AND T_17, T_15, T_16]
+AND/65516,/65515
+MOVE.A,/65514
+;Quadruple - [STP T_14, T_17, null]
+MOVE/65517,.R1
+MOVE/65514,[.R1]
+;Quadruple - [MVA T_18, conjuncion, null]
+MOVE#65532,/65513
+;Quadruple - [MVP T_19, conjuncion, null]
+MOVE/65532,/65512
+;Quadruple - [NOT T_19, null, null]
+NOT/65512
+;Quadruple - [STP T_18, T_19, null]
+MOVE/65513,.R1
+MOVE/65512,[.R1]
+;Quadruple - [MVA T_20, resultadoLogico, null]
+MOVE#65533,/65511
+;Quadruple - [MVP T_21, conjuncion, null]
+MOVE/65532,/65510
+;Quadruple - [MV T_22, 30, null]
+MOVE#30,/65509
+;Quadruple - [MV T_23, 20, null]
+MOVE#20,/65508
+;Quadruple - [CMP T_22, T_23, null]
+CMP/65509,/65508
+;Quadruple - [BN L_0, null, null]
+BN /L_0
+;Quadruple - [MV T_24, 0, null]
+MOVE#0,/65507
+;Quadruple - [BR L_1, null, null]
+BR /L_1
+;Quadruple - [INL L_0, null, null]
+L_0: 
+;Quadruple - [MV T_24, 1, null]
+MOVE#1,/65507
+;Quadruple - [INL L_1, null, null]
+L_1: 
+;Quadruple - [AND T_25, T_21, T_24]
+AND/65510,/65507
+MOVE.A,/65506
+;Quadruple - [STP T_20, T_25, null]
+MOVE/65511,.R1
+MOVE/65506,[.R1]
+;Quadruple - [MVP T_26, conjuncion, null]
+MOVE/65532,/65505
+;Quadruple - [BRF T_26, L_5, null]
+CMP #1,/65505
+BNZ /L_5
+;Quadruple - [WRITESTRING T_27, L_2, null]
+WRSTR /L_2
+;Quadruple - [BR L_4, null, null]
+BR /L_4
+;Quadruple - [INL L_5, null, null]
+L_5: 
+;Quadruple - [WRITESTRING T_28, L_3, null]
+WRSTR /L_3
+;Quadruple - [INL L_4, null, null]
+L_4: 
+;Quadruple - [NOP null, null, null]
+NOP
+;Quadruple - [HALT null, null, null]
+HALT
+;Quadruple - [CADENA "cierto", L_2, null]
+L_2:DATA "cierto"
+;Quadruple - [CADENA "falso", L_3, null]
+L_3:DATA "falso"

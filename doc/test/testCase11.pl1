@@ -1,0 +1,13 @@
+# programa con salida de texto
+programa dos:
+	variables
+		suma, a, b : entero;
+
+comienzo
+	a = 2;
+	b = 3;
+	suma = a + b;
+	escribir("suma = ");
+	escribir(suma);
+	#escribir("mundo");
+fin.

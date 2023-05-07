@@ -1,0 +1,72 @@
+;Quadruple - [MV T_2, 10, null]
+MOVE#10,/65533
+;Quadruple - [MV T_3, 30, null]
+MOVE#30,/65532
+;Quadruple - [CMP T_2, T_3, null]
+CMP/65533,/65532
+;Quadruple - [BN L_0, null, null]
+BN /L_0
+;Quadruple - [MV T_4, 0, null]
+MOVE#0,/65531
+;Quadruple - [BR L_1, null, null]
+BR /L_1
+;Quadruple - [INL L_0, null, null]
+L_0: 
+;Quadruple - [MV T_4, 1, null]
+MOVE#1,/65531
+;Quadruple - [INL L_1, null, null]
+L_1: 
+;Quadruple - [BRF T_4, L_10, null]
+CMP #1,/65531
+BNZ /L_10
+;Quadruple - [WRITESTRING T_5, L_2, null]
+WRSTR /L_2
+;Quadruple - [BR L_9, null, null]
+BR /L_9
+;Quadruple - [INL L_10, null, null]
+L_10: 
+;Quadruple - [MV T_6, 30, null]
+MOVE#30,/65529
+;Quadruple - [MV T_7, 10, null]
+MOVE#10,/65528
+;Quadruple - [CMP T_6, T_7, null]
+CMP/65529,/65528
+;Quadruple - [BN L_3, null, null]
+BN /L_3
+;Quadruple - [MV T_8, 0, null]
+MOVE#0,/65527
+;Quadruple - [BR L_4, null, null]
+BR /L_4
+;Quadruple - [INL L_3, null, null]
+L_3: 
+;Quadruple - [MV T_8, 1, null]
+MOVE#1,/65527
+;Quadruple - [INL L_4, null, null]
+L_4: 
+;Quadruple - [BRF T_8, L_8, null]
+CMP #1,/65527
+BNZ /L_8
+;Quadruple - [WRITESTRING T_9, L_5, null]
+WRSTR /L_5
+;Quadruple - [BR L_7, null, null]
+BR /L_7
+;Quadruple - [INL L_8, null, null]
+L_8: 
+;Quadruple - [WRITESTRING T_10, L_6, null]
+WRSTR /L_6
+;Quadruple - [INL L_7, null, null]
+L_7: 
+;Quadruple - [NOP null, null, null]
+NOP
+;Quadruple - [INL L_9, null, null]
+L_9: 
+;Quadruple - [NOP null, null, null]
+NOP
+;Quadruple - [HALT null, null, null]
+HALT
+;Quadruple - [CADENA "b es mayor que a", L_2, null]
+L_2:DATA "b es mayor que a"
+;Quadruple - [CADENA "a es mayor que b", L_5, null]
+L_5:DATA "a es mayor que b"
+;Quadruple - [CADENA "a y b son iguales", L_6, null]
+L_6:DATA "a y b son iguales"

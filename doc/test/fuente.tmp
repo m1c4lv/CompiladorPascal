@@ -1,0 +1,290 @@
+;Quadruple - [VARGLOBAL a, 0, null]
+MOVE #0,/65535
+;Quadruple - [VARGLOBAL v, 0, null]
+MOVE #0,/65534
+;Quadruple - [MV T_2, 3, null]
+MOVE#3,/65522
+;Quadruple - [MVA T_4, v, null]
+MOVE#65534,/65520
+;Quadruple - [MV T_5, 3, null]
+MOVE#3,/65519
+;Quadruple - [SUB T_5, T_5, 3]
+SUB/65519,#3
+MOVE.A,/65519
+;Quadruple - [SUBVECTOR T_6, T_4, T_5]
+SUB/65520,/65519
+MOVE .A,/65518
+;Quadruple - [MV T_9, 2, null]
+MOVE#2,/65515
+;Quadruple - [STP T_6, T_9, null]
+MOVE/65518,.R1
+MOVE/65515,[.R1]
+;Quadruple - [MV T_10, 5, null]
+MOVE#5,/65514
+;Quadruple - [MVA T_12, v, null]
+MOVE#65534,/65512
+;Quadruple - [MV T_13, 5, null]
+MOVE#5,/65511
+;Quadruple - [SUB T_13, T_13, 3]
+SUB/65511,#3
+MOVE.A,/65511
+;Quadruple - [SUBVECTOR T_14, T_12, T_13]
+SUB/65512,/65511
+MOVE .A,/65510
+;Quadruple - [MV T_17, 3, null]
+MOVE#3,/65507
+;Quadruple - [STP T_14, T_17, null]
+MOVE/65510,.R1
+MOVE/65507,[.R1]
+;Quadruple - [MV T_18, 7, null]
+MOVE#7,/65506
+;Quadruple - [MVA T_20, v, null]
+MOVE#65534,/65504
+;Quadruple - [MV T_21, 7, null]
+MOVE#7,/65503
+;Quadruple - [SUB T_21, T_21, 3]
+SUB/65503,#3
+MOVE.A,/65503
+;Quadruple - [SUBVECTOR T_22, T_20, T_21]
+SUB/65504,/65503
+MOVE .A,/65502
+;Quadruple - [MV T_25, 5, null]
+MOVE#5,/65499
+;Quadruple - [STP T_22, T_25, null]
+MOVE/65502,.R1
+MOVE/65499,[.R1]
+;Quadruple - [MV T_26, 4, null]
+MOVE#4,/65498
+;Quadruple - [MVA T_28, v, null]
+MOVE#65534,/65496
+;Quadruple - [MV T_29, 4, null]
+MOVE#4,/65495
+;Quadruple - [SUB T_29, T_29, 3]
+SUB/65495,#3
+MOVE.A,/65495
+;Quadruple - [SUBVECTOR T_30, T_28, T_29]
+SUB/65496,/65495
+MOVE .A,/65494
+;Quadruple - [MV T_33, 3, null]
+MOVE#3,/65491
+;Quadruple - [MVA T_35, v, null]
+MOVE#65534,/65489
+;Quadruple - [MV T_36, 3, null]
+MOVE#3,/65488
+;Quadruple - [SUB T_36, T_36, 3]
+SUB/65488,#3
+MOVE.A,/65488
+;Quadruple - [SUBVECTOR T_37, T_35, T_36]
+SUB/65489,/65488
+MOVE .A,/65487
+;Quadruple - [CARGARVALOR T_39, T_37, T_40]
+SUB/65487,/65484
+MOVE .A,.R1
+MOVE[.R1],/65485
+;Quadruple - [MV T_41, 1, null]
+MOVE#1,/65483
+;Quadruple - [ADD T_42, T_39, T_41]
+ADD/65485,/65483
+MOVE.A,/65482
+;Quadruple - [STP T_30, T_42, null]
+MOVE/65494,.R1
+MOVE/65482,[.R1]
+;Quadruple - [MV T_43, 6, null]
+MOVE#6,/65481
+;Quadruple - [MVA T_45, v, null]
+MOVE#65534,/65479
+;Quadruple - [MV T_46, 6, null]
+MOVE#6,/65478
+;Quadruple - [SUB T_46, T_46, 3]
+SUB/65478,#3
+MOVE.A,/65478
+;Quadruple - [SUBVECTOR T_47, T_45, T_46]
+SUB/65479,/65478
+MOVE .A,/65477
+;Quadruple - [MV T_50, 5, null]
+MOVE#5,/65474
+;Quadruple - [MVA T_52, v, null]
+MOVE#65534,/65472
+;Quadruple - [MV T_53, 5, null]
+MOVE#5,/65471
+;Quadruple - [SUB T_53, T_53, 3]
+SUB/65471,#3
+MOVE.A,/65471
+;Quadruple - [SUBVECTOR T_54, T_52, T_53]
+SUB/65472,/65471
+MOVE .A,/65470
+;Quadruple - [CARGARVALOR T_56, T_54, T_57]
+SUB/65470,/65467
+MOVE .A,.R1
+MOVE[.R1],/65468
+;Quadruple - [MV T_58, 7, null]
+MOVE#7,/65466
+;Quadruple - [MVA T_60, v, null]
+MOVE#65534,/65464
+;Quadruple - [MV T_61, 7, null]
+MOVE#7,/65463
+;Quadruple - [SUB T_61, T_61, 3]
+SUB/65463,#3
+MOVE.A,/65463
+;Quadruple - [SUBVECTOR T_62, T_60, T_61]
+SUB/65464,/65463
+MOVE .A,/65462
+;Quadruple - [CARGARVALOR T_64, T_62, T_65]
+SUB/65462,/65459
+MOVE .A,.R1
+MOVE[.R1],/65460
+;Quadruple - [MUL T_66, T_56, T_64]
+MUL/65468,/65460
+MOVE.A,/65458
+;Quadruple - [MV T_67, 10, null]
+MOVE#10,/65457
+;Quadruple - [ADD T_68, T_66, T_67]
+ADD/65458,/65457
+MOVE.A,/65456
+;Quadruple - [STP T_47, T_68, null]
+MOVE/65477,.R1
+MOVE/65456,[.R1]
+;Quadruple - [MVA T_69, a, null]
+MOVE#65535,/65455
+;Quadruple - [MV T_70, 5, null]
+MOVE#5,/65454
+;Quadruple - [MVA T_72, v, null]
+MOVE#65534,/65452
+;Quadruple - [MV T_73, 5, null]
+MOVE#5,/65451
+;Quadruple - [SUB T_73, T_73, 3]
+SUB/65451,#3
+MOVE.A,/65451
+;Quadruple - [SUBVECTOR T_74, T_72, T_73]
+SUB/65452,/65451
+MOVE .A,/65450
+;Quadruple - [CARGARVALOR T_76, T_74, T_77]
+SUB/65450,/65447
+MOVE .A,.R1
+MOVE[.R1],/65448
+;Quadruple - [MVA T_79, v, null]
+MOVE#65534,/65445
+;Quadruple - [MV T_80, T_76, null]
+MOVE/65448,/65444
+;Quadruple - [SUB T_80, T_80, 3]
+SUB/65444,#3
+MOVE.A,/65444
+;Quadruple - [SUBVECTOR T_81, T_79, T_80]
+SUB/65445,/65444
+MOVE .A,/65443
+;Quadruple - [CARGARVALOR T_83, T_81, T_84]
+SUB/65443,/65440
+MOVE .A,.R1
+MOVE[.R1],/65441
+;Quadruple - [STP T_69, T_83, null]
+MOVE/65455,.R1
+MOVE/65441,[.R1]
+;Quadruple - [MV T_85, 3, null]
+MOVE#3,/65439
+;Quadruple - [MVA T_87, v, null]
+MOVE#65534,/65437
+;Quadruple - [MV T_88, 3, null]
+MOVE#3,/65436
+;Quadruple - [SUB T_88, T_88, 3]
+SUB/65436,#3
+MOVE.A,/65436
+;Quadruple - [SUBVECTOR T_89, T_87, T_88]
+SUB/65437,/65436
+MOVE .A,/65435
+;Quadruple - [CARGARVALOR T_91, T_89, T_92]
+SUB/65435,/65432
+MOVE .A,.R1
+MOVE[.R1],/65433
+;Quadruple - [WRITEEXP T_91, null, null]
+WRINT /65433
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MV T_93, 4, null]
+MOVE#4,/65431
+;Quadruple - [MVA T_95, v, null]
+MOVE#65534,/65429
+;Quadruple - [MV T_96, 4, null]
+MOVE#4,/65428
+;Quadruple - [SUB T_96, T_96, 3]
+SUB/65428,#3
+MOVE.A,/65428
+;Quadruple - [SUBVECTOR T_97, T_95, T_96]
+SUB/65429,/65428
+MOVE .A,/65427
+;Quadruple - [CARGARVALOR T_99, T_97, T_100]
+SUB/65427,/65424
+MOVE .A,.R1
+MOVE[.R1],/65425
+;Quadruple - [WRITEEXP T_99, null, null]
+WRINT /65425
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MV T_101, 5, null]
+MOVE#5,/65423
+;Quadruple - [MVA T_103, v, null]
+MOVE#65534,/65421
+;Quadruple - [MV T_104, 5, null]
+MOVE#5,/65420
+;Quadruple - [SUB T_104, T_104, 3]
+SUB/65420,#3
+MOVE.A,/65420
+;Quadruple - [SUBVECTOR T_105, T_103, T_104]
+SUB/65421,/65420
+MOVE .A,/65419
+;Quadruple - [CARGARVALOR T_107, T_105, T_108]
+SUB/65419,/65416
+MOVE .A,.R1
+MOVE[.R1],/65417
+;Quadruple - [WRITEEXP T_107, null, null]
+WRINT /65417
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MV T_109, 6, null]
+MOVE#6,/65415
+;Quadruple - [MVA T_111, v, null]
+MOVE#65534,/65413
+;Quadruple - [MV T_112, 6, null]
+MOVE#6,/65412
+;Quadruple - [SUB T_112, T_112, 3]
+SUB/65412,#3
+MOVE.A,/65412
+;Quadruple - [SUBVECTOR T_113, T_111, T_112]
+SUB/65413,/65412
+MOVE .A,/65411
+;Quadruple - [CARGARVALOR T_115, T_113, T_116]
+SUB/65411,/65408
+MOVE .A,.R1
+MOVE[.R1],/65409
+;Quadruple - [WRITEEXP T_115, null, null]
+WRINT /65409
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MV T_117, 7, null]
+MOVE#7,/65407
+;Quadruple - [MVA T_119, v, null]
+MOVE#65534,/65405
+;Quadruple - [MV T_120, 7, null]
+MOVE#7,/65404
+;Quadruple - [SUB T_120, T_120, 3]
+SUB/65404,#3
+MOVE.A,/65404
+;Quadruple - [SUBVECTOR T_121, T_119, T_120]
+SUB/65405,/65404
+MOVE .A,/65403
+;Quadruple - [CARGARVALOR T_123, T_121, T_124]
+SUB/65403,/65400
+MOVE .A,.R1
+MOVE[.R1],/65401
+;Quadruple - [WRITEEXP T_123, null, null]
+WRINT /65401
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [MVP T_125, a, null]
+MOVE/65535,/65399
+;Quadruple - [WRITEEXP T_125, null, null]
+WRINT /65399
+WRCHAR #10
+WRCHAR #13
+;Quadruple - [HALT null, null, null]
+HALT
+
